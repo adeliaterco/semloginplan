@@ -1,7 +1,24 @@
 {
+  "functions": {
+    "app/[[...routes]].ts": {
+      "runtime": "@vercel/node"
+    }
+  },
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/dashboard",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/modules",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tools/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]
