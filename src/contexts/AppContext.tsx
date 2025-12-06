@@ -71,7 +71,22 @@ export function AppProvider({ children }: { children: ReactNode }) {
     const savedJournal = localStorage.getItem(STORAGE_KEYS.JOURNAL);
     const savedPoints = localStorage.getItem(STORAGE_KEYS.POINTS);
 
-    if (savedUser) setUserState(JSON.parse(savedUser));
+    // ✅ CRIAR USUÁRIO AUTOMATICAMENTE SE NÃO EXISTIR
+    if (savedUser) {
+      setUserState(JSON.parse(savedUser));
+    } else {
+      const defaultUser: UserData = {
+        name: 'Usuario',
+        email: 'usuario@app.com',
+        breakupType: 'distancing',
+        objective: 'Crecimiento personal',
+        startDate: new Date().toISOString(),
+        currentDay: 1,
+      };
+      setUserState(defaultUser);
+      localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(defaultUser));
+    }
+
     if (savedDayProgress) setDayProgress(JSON.parse(savedDayProgress));
     if (savedModuleProgress) setModuleProgress(JSON.parse(savedModuleProgress));
     if (savedJournal) setJournalEntries(JSON.parse(savedJournal));
