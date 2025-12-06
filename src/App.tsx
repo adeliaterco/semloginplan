@@ -28,7 +28,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Dashboard />} /> {/* ✅ MUDANÇA AQUI! */}
+            <Route path="/index" element={<Index />} /> {/* ✅ Index movido para /index */}
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/modules" element={<Modules />} />
