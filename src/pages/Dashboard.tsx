@@ -10,15 +10,41 @@ import { modules } from '@/data/modules';
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const { user, isLoggedIn, dayProgress, moduleProgress, streak, totalPoints, updateDayProgress } = useApp();
+  const { user, isLoggedIn, dayProgress, moduleProgress, streak, totalPoints, updateDayProgress, setUser } = useApp();
 
+  // ✅ CRIAR USUÁRIO AUTOMATICAMENTE SE NÃO EXISTIR
   useEffect(() => {
-    if (!isLoggedIn) {
-      navigate('/');
+    if (!isLoggedIn || !user) {
+      const defaultUser = {
+        name: 'Usuario',
+        email: 'usuario@app.com',
+        breakupType: 'distancing',
+        objective: 'Crecimiento personal',
+        startDate: new Date().toISOString(),
+        currentDay: 1,
+      };
+      setUser(defaultUser);
     }
-  }, [isLoggedIn, navigate]);
+  }, [isLoggedIn, user, setUser]);
 
-  if (!user) return null;
+  // ✅ REMOVER A VERIFICAÇÃO QUE CAUSAVA O REDIRECIONAMENTO
+  // useEffect(() => {
+  //   if (!isLoggedIn) {
+  //     navigate('/');
+  //   }
+  // }, [isLoggedIn, navigate]);
+
+  // ✅ MOSTRAR LOADING EM VEZ DE NULL
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary mb-4"></div>
+          <p className="text-muted-foreground">Carregando dashboard...</p>
+        </div>
+      </div>
+    );
+  }
 
   // Calculate current day based on start date
   const startDate = new Date(user.startDate);
