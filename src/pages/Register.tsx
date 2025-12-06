@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Target, ArrowLeft, ArrowRight, User, Mail, Heart } from 'lucide-react';
@@ -17,7 +17,7 @@ const breakupTypes = [
 
 export default function Register() {
   const navigate = useNavigate();
-  const { setUser } = useApp();
+  const { user, setUser } = useApp();
   
   const [formData, setFormData] = useState({
     name: '',
@@ -27,6 +27,14 @@ export default function Register() {
   });
 
   const [step, setStep] = useState(1);
+
+  // Auto-login check - bypass registration if user already exists
+  useEffect(() => {
+    if (user && user.name && user.email) {
+      // User is already logged in, redirect to dashboard
+      navigate('/dashboard');
+    }
+  }, [user, navigate]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -207,4 +215,4 @@ export default function Register() {
       </motion.div>
     </div>
   );
-} 
+}
