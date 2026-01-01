@@ -121,7 +121,7 @@ export default function Index() {
                   ))}
                 </div>
                 <div className="text-sm">
-                  <span className="text-foreground font-semibold">+3,847</span>
+                  <span className="text-foreground font-semibold">+9,000</span>
                   <span className="text-muted-foreground"> hombres transformados</span>
                 </div>
               </div>
