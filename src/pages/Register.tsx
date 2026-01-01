@@ -51,7 +51,7 @@ export default function Register() {
           {/* Logo */}
           <div className="mb-8">
             <Target className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h1 className="font-display text-3xl">PLAN A</h1>
+            <h1 className="font-display text-3xl">PRP</h1>
             <p className="text-muted-foreground mt-2">Accediendo a tu dashboard...</p>
           </div>
 

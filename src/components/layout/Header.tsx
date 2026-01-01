@@ -32,7 +32,7 @@ export function Header() {
             >
               <Target className="h-8 w-8 text-primary" />
               <span className="font-display text-2xl tracking-wider text-foreground">
-                PLAN A
+                PRP
               </span>
             </motion.div>
           </Link>

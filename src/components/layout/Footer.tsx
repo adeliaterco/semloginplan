@@ -8,9 +8,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-2xl text-foreground mb-2">PLAN A</h3>
+            <h3 className="font-display text-2xl text-foreground mb-2">PRP</h3>
             <p className="text-muted-foreground text-sm">
-              Reconquista en 21 Días. Tu camino hacia una mejor versión de ti mismo.
+              Tu camino hacia una mejor versión de ti mismo.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border/50 mt-8 pt-6 text-center text-sm text-muted-foreground">
-          <p>© 2024 PLAN A - Reconquista en 21 Días. Todos los derechos reservados.</p>
+          <p>© 2024 PRP. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

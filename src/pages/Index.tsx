@@ -85,7 +85,7 @@ export default function Index() {
               </motion.div>
 
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight mb-6">
-                <span className="text-foreground">PLAN A</span>
+                <span className="text-foreground">PRP</span>
                 <br />
                 <span className="gradient-text">RECONQUISTA</span>
                 <br />
@@ -343,7 +343,7 @@ export default function Index() {
       {/* Simple Footer for Landing */}
       <footer className="py-8 border-t border-border/50">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2024 PLAN A - Reconquista en 21 Días.</p>
+          <p>© 2024 PRP.</p>
         </div>
       </footer>
     </div>

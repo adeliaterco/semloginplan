@@ -60,7 +60,7 @@ export const modules: Module[] = [
       },
       {
         title: 'Por Qué Funciona Este Método',
-        content: 'PLAN A combina psicología conductual, teoría del apego y estrategias de comunicación probadas. No se trata de manipulación, sino de convertirte en la mejor versión de ti mismo.'
+        content: 'PRP combina psicología conductual, teoría del apego y estrategias de comunicación probadas. No se trata de manipulación, sino de convertirte en la mejor versión de ti mismo.'
       }
     ],
     doList: [
@@ -91,7 +91,7 @@ export const modules: Module[] = [
         correctIndex: 2
       },
       {
-        question: '¿En qué se basa el método PLAN A?',
+        question: '¿En qué se basa el método PRP?',
         options: ['Manipulación emocional', 'Psicología conductual y teoría del apego', 'Técnicas de seducción', 'Presión social'],
         correctIndex: 1
       }
