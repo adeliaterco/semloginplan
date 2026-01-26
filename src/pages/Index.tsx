@@ -89,7 +89,6 @@ export default function Index() {
                 <br />
                 <span className="gradient-text">RECONQUISTA</span>
                 <br />
-                <span className="text-foreground">EN 21 DÍAS</span>
               </h1>
 
               <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
