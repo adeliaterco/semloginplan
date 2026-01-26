@@ -215,7 +215,7 @@ export default function Index() {
               <div className="space-y-4">
                 {[
                   '16 módulos completos y detallados',
-                  'Tracker de progreso de 21 días',
+                  'Tracker de progreso',
                   'Generador de mensajes estratégicos',
                   'Análisis de señales de tu ex',
                   'Diario de reflexión guiado',
