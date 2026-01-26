@@ -326,7 +326,7 @@ export default function Index() {
                 ¿Listo para <span className="gradient-text">comenzar</span>?
               </h2>
               <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
-                Tu transformación comienza hoy. 21 días para convertirte en tu mejor versión.
+                Tu transformación comienza hoy.
               </p>
               <Link to="/register">
                 <Button variant="hero" size="xl">
